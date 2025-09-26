@@ -1,4 +1,4 @@
-# Finite difference method
+# Using Finite difference method to solve for particle in a box and particle in harmonic potential
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,14 +15,8 @@ c=2*m*d**2/sc.hbar**2
 
 #Potential
 def V(x):
-##    k=100
-##    return 0.5*k*x**2
-    return 0
-##    if np.abs(x)<5:
-##        return 1
-##    else:
-##        return 0
-
+    k=100 #put k=0 for particle in a box
+    return 0.5*k*x**2
 Vs=[]
 for i in range(len(x)):
     Vs.insert(i,V(x[i]))
@@ -49,3 +43,4 @@ plt.axvline(x=a)
 plt.axvline(x=b)
 plt.title("Particle in a Box")
 plt.show()
+
